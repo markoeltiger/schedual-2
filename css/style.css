@@ -1,0 +1,358 @@
+/* Enhanced UI styles for the resource management game */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+#game-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Game UI Elements */
+.game-ui {
+    position: absolute;
+    z-index: 10;
+}
+
+.resource-panel {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #4CAF50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+}
+
+.resource-counter {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.resource-counter img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Button styles */
+.game-button {
+    background: linear-gradient(to bottom, #2196F3, #0D47A1);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.game-button:hover {
+    background: linear-gradient(to bottom, #42A5F5, #1976D2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.game-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Upgrade panel */
+.upgrade-panel {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #FFC107;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+}
+
+.upgrade-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+}
+
+.upgrade-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.upgrade-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+.upgrade-info {
+    flex-grow: 1;
+}
+
+.upgrade-title {
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.upgrade-description {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.upgrade-cost {
+    color: #FFC107;
+    font-weight: bold;
+}
+
+/* Plot styles */
+.plot {
+    transition: transform 0.2s;
+}
+
+.plot:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+.plot-ready {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Notifications */
+.notification {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.notification.show {
+    opacity: 1;
+}
+
+/* Main menu styling */
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: linear-gradient(to bottom, #4CAF50, #2E7D32);
+}
+
+.game-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.menu-button {
+    background: linear-gradient(to bottom, #FFC107, #FF8F00);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    padding: 15px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 200px;
+}
+
+.menu-button:hover {
+    background: linear-gradient(to bottom, #FFD54F, #FFA000);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Instructions panel */
+.instructions-panel {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.instructions-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #FFC107;
+}
+
+.instruction-step {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.step-number {
+    background-color: #4CAF50;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+/* Ad containers with improved styling */
+.ad-container {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px dashed #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.ad-container:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.ad-container p {
+    color: #ccc;
+    font-size: 12px;
+}
+
+.ad-banner-top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+}
+
+.ad-banner-bottom {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #game-container {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+    
+    .game-title {
+        font-size: 36px;
+    }
+    
+    .menu-button {
+        padding: 12px 30px;
+        font-size: 18px;
+        width: 180px;
+    }
+    
+    .resource-panel, .upgrade-panel {
+        padding: 8px;
+        margin: 5px;
+    }
+    
+    .upgrade-item {
+        padding: 5px;
+    }
+    
+    .upgrade-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .upgrade-description {
+        font-size: 10px;
+    }
+}
+
+/* Loading screen */
+.loading-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loading-bar-container {
+    width: 300px;
+    height: 30px;
+    background-color: #222;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.loading-bar {
+    height: 100%;
+    background: linear-gradient(to right, #4CAF50, #8BC34A);
+    width: 0%;
+    transition: width 0.3s;
+}
+
+.loading-text {
+    margin-top: 10px;
+    color: white;
+    font-size: 16px;
+}

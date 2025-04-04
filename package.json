@@ -1,0 +1,30 @@
+{
+  "name": "resource-management-simulation",
+  "version": "1.0.0",
+  "description": "A browser-based resource management simulation game using Phaser.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development"
+  },
+  "keywords": [
+    "game",
+    "phaser",
+    "html5",
+    "javascript",
+    "resource-management"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "phaser": "^3.55.2"
+  },
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1",
+    "copy-webpack-plugin": "^11.0.0",
+    "html-webpack-plugin": "^5.5.0"
+  }
+}

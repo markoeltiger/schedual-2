@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+    <rect width="64" height="64" fill="#4CAF50" />
+    <pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse">
+        <rect width="4" height="64" fill="rgba(255,255,255,0.1)" />
+    </pattern>
+    <rect width="64" height="64" fill="url(#grid)" />
+</svg>

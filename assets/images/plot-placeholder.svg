@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+    <rect x="4" y="4" width="56" height="56" fill="#795548" />
+    <pattern id="soil" width="16" height="16" patternUnits="userSpaceOnUse">
+        <rect x="0" y="0" width="4" height="4" fill="rgba(0,0,0,0.2)" />
+    </pattern>
+    <rect x="4" y="4" width="56" height="56" fill="url(#soil)" />
+</svg>
