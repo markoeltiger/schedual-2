@@ -519,10 +519,10 @@ class GameScene extends Phaser.Scene {
         const plotData = plot.getData();
         
         // Calculate yield based on upgrade
-        const yield = 20 * this.upgrades.harvestYield;
+        const resourceYield = 20 * this.upgrades.harvestYield;
         
         // Add resources
-        this.resources += yield;
+        this.resources += resourceYield;
         
         // Play harvest sound
         this.sound.play('harvest');
